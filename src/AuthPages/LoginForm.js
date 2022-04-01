@@ -39,16 +39,16 @@ class LoginForm extends React.Component {
     });
   }
   onsubmithandler(e) {
-    console.log('inside submit');
     e.preventDefault();
     console.log(this.state);
+    //fetch request on firebase
   }
   render() {
     return (
       <Fragment>
         <div className={classes.loginform}>
           <h1 className={classes.headerTitle}>Login </h1>
-          <form>
+          <form onSubmit={this.onsubmithandler}>
             <FormInput
               description="Username"
               type="text"
@@ -72,7 +72,7 @@ class LoginForm extends React.Component {
                 <option value="Student">Student</option>
               </select>
             </div>
-            <FormButton onclick={this.onsubmithandler} description="Login" />
+            <FormButton description="Login" type="submit" />
           </form>
         </div>
       </Fragment>

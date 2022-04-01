@@ -6,7 +6,7 @@ class FormButton extends React.Component{
   }
   render(){
     return <div className={classes.button} className={classes.row}>
-    <button onClick={this.props.onclick}>
+    <button  type={this.props.type}>
       {this.props.description}
       </button>
     </div>
