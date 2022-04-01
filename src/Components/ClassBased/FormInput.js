@@ -2,12 +2,6 @@ import React from 'react';
 import classes from './FormInput.module.css';
 
 class FormInput extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      email: '',
-    };
-  }
   formsubmithandler() {
     console.log(this.state.email);
   }

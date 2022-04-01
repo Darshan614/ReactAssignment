@@ -11,6 +11,7 @@ function SignUpForm() {
         <form>
           <FormInput description="Email" type="email" />
           <FormInput description="Password" type="password" />
+          <FormInput description="User Detail" type="textarea" />
 
           <div className={classes.row}>
             <label>SignUp as:</label>

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import FormInput from '../Components/ClassBased/FormInput';
 import classes from './LoginForm.module.css';
+import FormButton from '../Components/FunctionBased/FormButton';
 
 class LoginForm extends React.Component {
   render() {
@@ -13,12 +14,13 @@ class LoginForm extends React.Component {
             <FormInput description="Password" type="password" />
             <div className={classes.row}>
               <label>Login as:</label>
-              <select id="gender" name="gender">
-                <option value="Male">Admin</option>
-                <option value="Male">Employee</option>
-                <option value="Male">Student</option>
+              <select id="level" name="level">
+                <option value="Admin">Admin</option>
+                <option value="Employee">Employee</option>
+                <option value="Student">Student</option>
               </select>
             </div>
+            <FormButton description="Login"/>
           </form>
         </div>
       </Fragment>
