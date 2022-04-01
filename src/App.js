@@ -16,7 +16,7 @@ export default function App() {
     <div>
       {islogin && <LoginForm />}
       {!islogin && <SignUpForm />}
-      <FormButton onclick={formtoggler} description={islogin ? "SignUp" : "Login"}/>
+      <FormButton onsubmit={formtoggler} description={islogin ? "SignUp" : "Login"}/>
     </div>
   );
 }

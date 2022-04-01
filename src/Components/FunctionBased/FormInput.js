@@ -5,7 +5,7 @@ const FormInput = (props) => {
   return (
     <div className={classes.row}>
       <label>{props.description}</label>
-      <input type={props.type} />
+      <input onChange={props.onchange} type={props.type} />
     </div>
   );
 };
