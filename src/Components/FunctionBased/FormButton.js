@@ -1,9 +1,10 @@
 import React from 'react';
+import classes from './FormButton.module.css';
 
-function FormButton(){
-  return <div>
-    <button>
-      Submit
+function FormButton(props){
+  return <div className={classes.button} className={classes.row}>
+    <button onClick={props.onclick}>
+      {props.description}
       </button>
     </div>
 }

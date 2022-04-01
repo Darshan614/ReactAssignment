@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from './FormInput.module.css';
 
 class FormInput extends React.Component {
   constructor() {
@@ -12,7 +13,7 @@ class FormInput extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className={classes.row}>
         <label>{this.props.description}</label>
         <input type={this.props.type} />
       </div>

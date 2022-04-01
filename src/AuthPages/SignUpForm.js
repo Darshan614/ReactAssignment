@@ -7,18 +7,21 @@ function SignUpForm() {
   return (
     <Fragment>
       <div className={classes.signupform}>
-      <h1 className={classes.headerTitle}>SignUp</h1>
-      <form>
-        <FormInput description="Email" type="email" />
-        <FormInput description="Password" type="password" />
-        <label>SignUp as:</label>
-        <select id="gender" name="gender">
-          <option value="Male">Admin</option>
-          <option value="Male">Employee</option>
-          <option value="Male">Student</option>
-        </select>
-        <FormButton />
-      </form>
+        <h1 className={classes.headerTitle}>SignUp</h1>
+        <form>
+          <FormInput description="Email" type="email" />
+          <FormInput description="Password" type="password" />
+
+          <div className={classes.row}>
+            <label>SignUp as:</label>
+            <select id="gender" name="gender">
+              <option value="Male">Admin</option>
+              <option value="Male">Employee</option>
+              <option value="Male">Student</option>
+            </select>
+          </div>
+          <FormButton description="SignUp"/>
+        </form>
       </div>
     </Fragment>
   );
