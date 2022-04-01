@@ -9,19 +9,40 @@ class LoginForm extends React.Component {
     this.state = {
       username: '',
       password: '',
+      level: '',
     };
     this.usernamechangehandler = this.usernamechangehandler.bind(this);
+    this.passwordchangehandler = this.passwordchangehandler.bind(this);
+    this.levelchangehandler = this.levelchangehandler.bind(this);
+    this.onsubmithandler = this.onsubmithandler.bind(this);
   }
   usernamechangehandler(event) {
     this.setState({
       username: event.target.value,
       password: this.state.password,
+      level: this.state.level,
     });
     console.log(this.state);
   }
-  // passwordchangehandler(event) {
-  //   this.setState = { password: event.target.value };
-  // }
+  passwordchangehandler(event) {
+    this.setState({
+      username: this.state.username,
+      password: event.target.value,
+      level: this.state.level,
+    });
+  }
+  levelchangehandler(event) {
+    this.setState({
+      username: this.state.username,
+      password: this.state.password,
+      level: event.target.value,
+    });
+  }
+  onsubmithandler(e) {
+    console.log('inside submit');
+    e.preventDefault();
+    console.log(this.state);
+  }
   render() {
     return (
       <Fragment>
@@ -33,16 +54,25 @@ class LoginForm extends React.Component {
               type="text"
               onchang={this.usernamechangehandler}
             />
-            <FormInput description="Password" type="password" />
+            <FormInput
+              description="Password"
+              type="password"
+              onchang={this.passwordchangehandler}
+            />
+
             <div className={classes.row}>
               <label>Login as:</label>
-              <select id="level" name="level">
+              <select
+                onChange={this.levelchangehandler}
+                id="level"
+                name="level"
+              >
                 <option value="Admin">Admin</option>
                 <option value="Employee">Employee</option>
                 <option value="Student">Student</option>
               </select>
             </div>
-            <FormButton description="Login" />
+            <FormButton onclick={this.onsubmithandler} description="Login" />
           </form>
         </div>
       </Fragment>
