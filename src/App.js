@@ -1,11 +1,13 @@
-import React from "react";
-import "./style.css";
-import Form from './Form';
+import React from 'react';
+import './style.css';
+import LoginForm from './LoginForm';
+import SignUpForm from './SignUpForm';
 
 export default function App() {
   return (
     <div>
-      <Form />
+      <LoginForm />
+      <SignUpForm />
     </div>
   );
 }
