@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react';
-import FormInput from './Components/ClassBased/FormInput';
+import FormInput from '../Components/ClassBased/FormInput';
 
 class LoginForm extends React.Component {
   render() {
     return (
       <Fragment>
-        <h1>Login Form</h1>
+        <h1>Login </h1>
         <form>
-          <FormInput description="Email" type="email" />
+          <FormInput description="Username" type="text" />
           <FormInput description="Password" type="password" />
           <label>Login as:</label>
           <select id="gender" name="gender">
@@ -15,6 +15,7 @@ class LoginForm extends React.Component {
             <option value="Male">Employee</option>
             <option value="Male">Student</option>
           </select>
+
         </form>
       </Fragment>
     );

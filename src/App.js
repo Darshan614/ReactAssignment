@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
-import LoginForm from './LoginForm';
-import SignUpForm from './SignUpForm';
+import LoginForm from './AuthPages/LoginForm';
+import SignUpForm from './AuthPages/SignUpForm';
 
 export default function App() {
   return (
