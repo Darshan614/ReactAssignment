@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 const testQuestions = [
@@ -7,18 +7,26 @@ const testQuestions = [
 ];
 
 function Test() {
+  var [time, settime] = useState(15);
+  useEffect(() => {
+    setInterval(() => {
+      settime((prevState) => prevState - 1);
+      console.log(time);
+    }, 10000);
+  }, []);
+
   let params = useParams();
   let course = params.coursetitle;
   let id = params.id;
   let questionSet = testQuestions.map((courseSet) => {
-    console.log(courseSet);
+    // console.log(courseSet);
     if (Object.keys(courseSet)[0] == course) {
       return courseSet;
     }
   });
 
   questionSet = Object.values(questionSet[0])[0];
-  console.log(questionSet);
+  // console.log(questionSet);
   const qalist = questionSet.map((qa) => {
     return (
       <div>
