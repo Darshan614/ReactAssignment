@@ -1,22 +1,14 @@
 import React , { useState }from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
-import LoginForm from './AuthPages/LoginForm';
-import SignUpForm from './AuthPages/SignUpForm';
-import FormButton from './Components/FunctionBased/FormButton';
 
 export default function App() {
-  const [islogin, setislogin] = useState(true);
-  const formtoggler = () => {
-    console.log("inside toggle")
-    setislogin(state=>{
-      return !state
-    })
-  }
+  
   return (
     <div>
-      {islogin && <LoginForm />}
-      {!islogin && <SignUpForm />}
-      <FormButton onsubmit={formtoggler} description={islogin ? "SignUp" : "Login"}/>
+      Welcome to home page!
+      Go to available courses
+      <Link to='/courses'><p>Courses</p></Link>
     </div>
   );
 }
